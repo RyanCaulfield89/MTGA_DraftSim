@@ -82,7 +82,7 @@ class Player:
                 loses += 1
         self.gems += self.quick_prizes[wins][0] #Add prize gems
         self.packs += 1 #Always get one pack
-        if(random.random() > self.quick_prizes[wins][1]): #Maybe get a 2nd pack
+        if(random.random() < self.quick_prizes[wins][1]): #Maybe get a 2nd pack
             self.packs += 1
         if(self.gems < self.quick_cost):
             #If the player is out of gems turn off the active flag
